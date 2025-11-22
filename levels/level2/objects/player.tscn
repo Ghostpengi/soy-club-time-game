@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://deenkq7frep4r"]
+[gd_scene load_steps=7 format=3 uid="uid://deenkq7frep4r"]
 
 [ext_resource type="Script" uid="uid://b6ji4gsne73fd" path="res://levels/level2/objects/player.gd" id="1_i2d1q"]
+[ext_resource type="Script" uid="uid://b5hkqk2qcccst" path="res://levels/level2/objects/character_body_2d.gd" id="2_a6fqu"]
 [ext_resource type="Texture2D" uid="uid://c0jd2w5qiy1h2" path="res://levels/level2/image/playerwalk1.png" id="2_rtsq4"]
 [ext_resource type="Texture2D" uid="uid://cr3nk026cn1fq" path="res://levels/level2/image/playerwalk2.png" id="3_a6fqu"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yon4j"]
-radius = 34.0
-height = 130.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q0ykd"]
 animations = [{
@@ -27,17 +24,24 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yon4j"]
+radius = 30.0
+height = 112.0
+
 [node name="Player" type="Node2D"]
 script = ExtResource("1_i2d1q")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_a6fqu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CapsuleShape2D_yon4j")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -1.0000153)
-scale = Vector2(0.3174905, 0.3316583)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1.1920929e-07, 0.9999969)
+scale = Vector2(0.23574145, 0.28140706)
 sprite_frames = SubResource("SpriteFrames_q0ykd")
 animation = &"walk"
 autoplay = "walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_yon4j")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

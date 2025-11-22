@@ -10,17 +10,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
 	#Gravity
-	if jump_impulse > 0:
-		jump_impulse -= 1;
-	self.global_position.y += 8-jump_impulse;
+	#if jump_impulse > 0:
+	#	jump_impulse -= 1;
+	#self.global_position.y += 8-jump_impulse;
 	#Move player checks or something
-	if Input.is_action_pressed("move_right"):
-		self.global_position.x += 8;
-	if Input.is_action_pressed("move_left"):
-		self.global_position.x -= 8;
-	if Input.is_action_pressed("move_up"):
-		jump_impulse = 20;
+	#if Input.is_action_pressed("move_right"):
+	#	self.global_position.x += 8;
+	#if Input.is_action_pressed("move_left"):
+	#	self.global_position.x -= 8;
+	#if Input.is_action_pressed("move_up"):
+	#	jump_impulse = 20;
 		
 		
 	

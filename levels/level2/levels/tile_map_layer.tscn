@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://cj3gulld75h3w"]
+
+[ext_resource type="Texture2D" uid="uid://die3ac3tthc6a" path="res://levels/level2/image/ground_bottom.png" id="1_avucp"]
+[ext_resource type="Texture2D" uid="uid://c40i41c1do6s2" path="res://levels/level2/image/ground_top.png" id="2_gp3ra"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_avucp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fu5um"]
+texture = ExtResource("1_avucp")
+texture_region_size = Vector2i(20, 20)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.992937, -9.172794, 9.3526535, -9.3526535, 9.172794, 9.712372, -9.172795, 9.532513)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.992937, -9.172794, 9.3526535, -9.3526535, 9.172794, 9.712372, -9.172795, 9.532513)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.992937, -9.172794, 9.3526535, -9.3526535, 9.172794, 9.712372, -9.172795, 9.532513)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.992937, -9.172794, 9.3526535, -9.3526535, 9.172794, 9.712372, -9.172795, 9.532513)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sex30"]
+texture = ExtResource("2_gp3ra")
+texture_region_size = Vector2i(20, 20)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.532513, -9.532512, 9.712372, -9.3526535, 9.712372, 9.352655, -9.712372, 9.352655)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.532513, -9.532512, 9.712372, -9.3526535, 9.712372, 9.352655, -9.712372, 9.352655)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.532513, -9.532512, 9.712372, -9.3526535, 9.712372, 9.352655, -9.712372, 9.352655)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.532513, -9.532512, 9.712372, -9.3526535, 9.712372, 9.352655, -9.712372, 9.352655)
+
+[sub_resource type="TileSet" id="TileSet_jyvv3"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_avucp")
+sources/0 = SubResource("TileSetAtlasSource_fu5um")
+sources/1 = SubResource("TileSetAtlasSource_sex30")
+
+[node name="TileMapLayer" type="TileMapLayer"]
+tile_set = SubResource("TileSet_jyvv3")

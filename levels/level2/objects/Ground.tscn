@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqna505ddoknk"]
+
+[ext_resource type="Script" uid="uid://cc0nssd5uedx7" path="res://levels/level2/objects/ground.gd" id="1_06fb7"]
+[ext_resource type="PackedScene" uid="uid://cj3gulld75h3w" path="res://levels/level2/levels/tile_map_layer.tscn" id="2_q541s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q541s"]
+size = Vector2(40, 40)
+
+[node name="Ground" type="Node2D"]
+script = ExtResource("1_06fb7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_q541s")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("2_q541s")]
