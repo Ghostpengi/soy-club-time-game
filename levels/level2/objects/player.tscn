@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://deenkq7frep4r"]
+[gd_scene load_steps=8 format=3 uid="uid://deenkq7frep4r"]
 
 [ext_resource type="Script" uid="uid://b6ji4gsne73fd" path="res://levels/level2/objects/player.gd" id="1_i2d1q"]
 [ext_resource type="Script" uid="uid://b5hkqk2qcccst" path="res://levels/level2/objects/character_body_2d.gd" id="2_a6fqu"]
@@ -28,6 +28,10 @@ animations = [{
 radius = 30.0
 height = 112.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6fqu"]
+radius = 30.0
+height = 112.0
+
 [node name="Player" type="Node2D"]
 script = ExtResource("1_i2d1q")
 
@@ -45,3 +49,8 @@ autoplay = "walk"
 shape = SubResource("CapsuleShape2D_yon4j")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+shape = SubResource("CapsuleShape2D_a6fqu")
