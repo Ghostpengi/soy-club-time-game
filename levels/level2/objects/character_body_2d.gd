@@ -58,7 +58,15 @@ func _physics_process(delta: float) -> void:
 		is_climbing = true
 		pause_gravity = true
 		
+	if can_climb and Input.is_action_pressed("move_down"):
+		velocity.y = -(JUMP_VELOCITY/2)
+		is_climbing = true
+		pause_gravity = true
+		
 	if can_climb and is_climbing and Input.is_action_just_released("move_up"):
+		velocity.y = 0
+		
+	if can_climb and is_climbing and Input.is_action_just_released("move_down"):
 		velocity.y = 0
 		
 		
