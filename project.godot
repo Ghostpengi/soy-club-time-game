@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
 
+[global_group]
+
+Climable="Applies to all climable objects"
+
 [input]
 
 move_right={

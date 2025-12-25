@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cj3gulld75h3w"]
+[gd_scene load_steps=7 format=4 uid="uid://cj3gulld75h3w"]
 
 [ext_resource type="Texture2D" uid="uid://die3ac3tthc6a" path="res://levels/level2/image/ground_bottom.png" id="1_avucp"]
 [ext_resource type="Texture2D" uid="uid://c40i41c1do6s2" path="res://levels/level2/image/ground_top.png" id="2_gp3ra"]
@@ -36,4 +36,5 @@ sources/0 = SubResource("TileSetAtlasSource_fu5um")
 sources/1 = SubResource("TileSetAtlasSource_sex30")
 
 [node name="TileMapLayer" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAD9/wMAAQAAAAAAAAD9/wQAAQAAAAEAAAD+/wMAAQABAAAAAAD+/wQAAQABAAEAAAD//wMAAQAAAAAAAAD//wQAAQAAAAEAAAAAAAMAAQABAAAAAAAAAAQAAQABAAEAAAABAAMAAQAAAAAAAAABAAQAAQAAAAEAAAACAAMAAQABAAAAAAACAAQAAQABAAEAAAADAAMAAQAAAAAAAAADAAQAAQAAAAEAAAAEAAMAAQABAAAAAAAEAAQAAQABAAEAAAAFAAMAAQAAAAAAAAAFAAQAAQAAAAEAAAAGAAMAAQABAAAAAAAGAAQAAQABAAEAAAAHAAMAAQAAAAAAAAAHAAQAAQAAAAEAAAAIAAMAAQABAAAAAAAIAAQAAQABAAEAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAEAAAAKAAMAAQABAAAAAAAKAAQAAQABAAEAAAALAAMAAQAAAAAAAAALAAQAAQAAAAEAAAAMAAQAAQABAAEAAAA=")
 tile_set = SubResource("TileSet_jyvv3")
